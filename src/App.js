@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Jobs from './components/jobs/Jobs';
+import Nav from './components/nav/Nav';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const[title,setTitle]=useState('');
+  const[type,setType]=useState('All');
+  
+ return(
+  <>
+  <Nav/>
+  <Jobs title={title} setTitle={setTitle} type={type} setType={setType}/>
+  </>
+ )
 }
 
 export default App;
