@@ -31,19 +31,19 @@ const PostJob=()=>{
                 <h2 className="display-5">Post Job</h2>
             <div>
                 <label htmlFor="inputTitle">Job Title:</label><br />
-                <input type="text" name="title" id="inputTitle" className="form-control" onChange={handleChange} />
+                <input type="text" name="title" id="inputTitle" className="form-control" onChange={handleChange} required/>
             </div>
             <div>
                 <label htmlFor="inputCompany">Company Name:</label> <br />
-                <input type="text" name="companyName" id="inputCompany" className="form-control" onChange={handleChange}  />
+                <input type="text" name="companyName" id="inputCompany" className="form-control" onChange={handleChange} required />
             </div>
             <div>
                 <label htmlFor="inputLocation">Location:</label> <br />
-                <input type="text" id="inputLocation" name="location" className="form-control" onChange={handleChange} />
+                <input type="text" id="inputLocation" name="location" className="form-control" onChange={handleChange} required/>
             </div>
             <div>
                 <label htmlFor="inputSalary">Salary:</label> <br />
-                <input type="number" id="inputSalary" name="salary" className="form-control" onChange={handleChange}/>
+                <input type="number" id="inputSalary" name="salary" className="form-control" onChange={handleChange} required/>
             </div>
             <div>
                 <label htmlFor="inputType">Job Type:</label>
@@ -57,11 +57,11 @@ const PostJob=()=>{
             </div>
             <div>
                 <label htmlFor="inputDesc">Job Description:</label><br />
-                <textarea name="description" id="inputDesc" rows={2} className="form-control" onChange={handleChange}></textarea>
+                <textarea name="description" id="inputDesc" rows={2} className="form-control" onChange={handleChange} required></textarea>
             </div>
             <div>
             <label htmlFor="inputQualification">Job Qualifications: (use " , " for separator)</label> <br />
-            <textarea name="qualification" id="inputQualification" rows={2} className="form-control" onChange={handleChange}></textarea>
+            <textarea name="qualification" id="inputQualification" rows={2} className="form-control" onChange={handleChange} required></textarea>
             </div>
             <br />
             <input className="btn btn-primary" type="submit" value="Post Job" />
