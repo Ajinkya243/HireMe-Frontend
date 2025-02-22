@@ -30,7 +30,7 @@ const JobGrid=({title,type})=>{
     
     useEffect(()=>{
         if(data){
-        const filterData=data.filter(el=>el.title.toLowerCase().includes(title.toLowerCase()) && (type==='All' || el.jobType===type));
+        const filterData=data.filter(el=>el.title.toLowerCase().includes(title.trim().toLowerCase()) && (type==='All' || el.jobType===type));
         setJobs(filterData);
         }
     },[title,type,data])
