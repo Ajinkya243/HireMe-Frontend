@@ -43,7 +43,7 @@ const JobGrid=({title,type})=>{
         <div className="row g-5">
         {jobs.length===0 && !isLoading && <p>No Such jobs found</p>}
         {jobs && jobs.map(el=>(
-            <div key={el._id} className="col col-md-4 col-sm-12">
+            <div key={el._id} className="col col-md-4 col-sm-12 col-12">
             <div className="card">
                 <div className="card-body fs-5">
                     <p className='display-6'><strong>{el.title}</strong></p>
